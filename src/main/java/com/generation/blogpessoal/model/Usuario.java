@@ -43,6 +43,20 @@ public class Usuario {
 		   cascade = CascadeType.REMOVE)
    @JsonIgnoreProperties("usuario")
     private List<Postagem> postagem;
+ 
+
+public Usuario(Long id,String nome,String senha, String usuario, String foto) {
+	this.id = id;
+	this.nome = nome;
+	this.senha = senha;
+	this.usuario = usuario;
+	this.foto = foto;
+}
+
+
+public Usuario() {
+}
+
 
 public Long getId() {
 	return id;
