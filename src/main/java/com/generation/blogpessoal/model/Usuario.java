@@ -45,11 +45,11 @@ public class Usuario {
     private List<Postagem> postagem;
  
 
-public Usuario(Long id,String nome,String senha, String usuario, String foto) {
+public Usuario(Long id,String nome,String usuario, String senha, String foto) {
 	this.id = id;
 	this.nome = nome;
-	this.senha = senha;
 	this.usuario = usuario;
+	this.senha = senha;
 	this.foto = foto;
 }
 

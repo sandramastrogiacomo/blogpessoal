@@ -39,7 +39,7 @@ void start() {
 	
 	usuarioRepository.deleteAll();
 	
-	usuarioService.cadastrarUsuario(new Usuario(null, "Root", "root@root.com", "rootroot", "- "));
+	usuarioService.cadastrarUsuario(new Usuario(null, "Root", "root@root.com", "rootroot", " "));
 }
 
 @Test
@@ -103,7 +103,7 @@ public void deveMostrarTodosUsuarios() {
 	
 	ResponseEntity<String> resposta = testRestTemplate
 			.withBasicAuth ("root@root.com", "rootroot")
-			.exchange("/usuario/all", HttpMethod.GET, null, String.class);
+			.exchange("/usuarios/all", HttpMethod.GET, null, String.class);
 	
 	assertEquals(HttpStatus.OK, resposta.getStatusCode());
 	
